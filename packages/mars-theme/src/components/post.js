@@ -26,8 +26,12 @@ import FeaturedMedia from "./featured-media";
 const Post = ({ state, actions, libraries }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
+
+  console.log(data)
   // Get the data of the post.
   const post = state.source[data.type][data.id];
+
+  console.log(post, 'Postituse info')
   // Get the data of the author.
   const author = state.source.author[post.author];
   // Get a human readable date.
